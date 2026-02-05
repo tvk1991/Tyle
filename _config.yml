@@ -1,0 +1,63 @@
+# Cấu hình cơ bản
+title: "Bảng Tính Hoa Hồng CTV"
+description: "Tính hoa hồng theo tỷ lệ 0.4% cho BILL A và 0.2% cho BILL B"
+baseurl: "" # Để trống nếu repository là username.github.io
+url: "https://tvk1991.github.io" # Thay bằng username của bạn
+
+# Cấu hình GitHub Pages
+github:
+  is_project_page: true
+
+# Jekyll configuration
+markdown: kramdown
+permalink: pretty
+
+# Theme
+theme: minima
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Navigation menu
+navigation:
+  - title: Trang chủ
+    url: /
+  - title: Hướng dẫn
+    url: #huong-dan
+  - title: Tính toán
+    url: #tinh-toan
+  - title: Xuất Excel
+    url: #xuat-excel
+  - title: Liên hệ
+    url: #lien-he
+
+# Plugin
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude từ build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - .gitignore
+  - README.md
